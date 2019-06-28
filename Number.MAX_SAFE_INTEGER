@@ -1,1 +1,10 @@
-script  
+ npm i json-bigint
+ 
+main内统一设置请求拦截项目
+
+import JSONbig from 'json-bigint'
+ 
+配置请求项
+axios.defaults.transformResponse = [function (data) {
+return JSONbig.parse(data)
+}]
